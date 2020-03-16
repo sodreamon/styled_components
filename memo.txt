@@ -1,4 +1,6 @@
-### styled-components
+<---- styled-components ---->
+
+#### styled-components
 npm install styled-components
 import styled from "styled-components";
 
@@ -33,6 +35,80 @@ const Button = styled.button`
 
 
 
+
+### createGlobalStyle
+import styled, { createGlobalStyle } from "styled-components";
+const GlobalStyle = createGlobalStyle``;
+<Container>
+    <GlobalStyle />
+</Container>
+
+
+
+
+
+### styled components 복제 
+class App extends Component {
+  render() {
+    return (
+      <Container>
+        <Button>Hello</Button>
+        <Button danger>Hello</Button>
+        <Anchor as="a" href="https://www.google.com"> Go to google</Anchor> 💛
+      </Container>
+    );
+  }
+}
+const Button = styled.button``;
+
+const Anchor = styled(Button)`
+  text-decoration: none;
+`;💛
+
+
+
+
+
+
+
+### animation
+import styled, { keyframes💛, css 💛} from "styled-components"; 
+class App extends Component {
+  render() {
+    return (
+      <Container>
+        <Button>Hello</Button>
+        <Button danger rotationTime={2}💛>Hello</Button>        
+      </Container>
+    );
+  }
+}
+const Button = styled.button`
+  ${props => {
+    if (props.danger) {
+      return css`💛
+        animation: ${Rotation} ${props.rotationTime}s💛 linear infinite;
+      `;
+    }
+  }};
+`;
+const Rotation = keyframes` 💛
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+`;
+
+
+
+
+
+
+
+
+<---- react ---->
 
 ### className
 <Button danger />
