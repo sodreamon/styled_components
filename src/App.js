@@ -9,12 +9,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Container = styled.div`
-  height: 100vh;
-  width: 100%;
-  background-color: pink;
-`;
-
 const Card = styled.div`
   background-color: red;
 `;
@@ -22,6 +16,15 @@ const Button = styled.button`
   border-radius: 30px;
   padding: 25px 15px;
   background-color: ${props => props.theme.successColor};
+`;
+
+const Container = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-color: pink;
+  ${Card} {
+    background-color: blue;
+  }
 `;
 
 class App extends Component {
